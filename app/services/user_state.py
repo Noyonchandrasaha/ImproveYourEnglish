@@ -15,11 +15,9 @@ def update_user_topics(user_id: int, topic: str):
     if topic not in topics:
         topics.append(topic)
 
-
 def set_bangla_sentence(user_id: int, sentence: str):
     set_user_state(user_id, "bangla_sentence", sentence)
     set_user_state(user_id, "awaiting_translation", True)
-
 
 def get_bangla_sentence(user_id: int):
     return user_states.get(user_id, {}).get("bangla_sentence")
@@ -27,7 +25,6 @@ def get_bangla_sentence(user_id: int):
 def clear_user_state(user_id: int):
     if user_id in user_states:
         del user_states[user_id]
-
 
 def get_next_topic(user_id: int):
     topic_sequence = [

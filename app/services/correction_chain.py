@@ -22,10 +22,10 @@ class CorrectionChainService:
                 Now do the following:
                 1. Check if the English sentence is grammatically correct and natural for IELTS.
                 2. If wrong, provide a corrected version.
-                3. Mention which grammar topic it relates to and its gramatical structure.
+                3. Mention which grammar topic it relates to and its grammatical structure.
                 4. Explain the mistake in simple Bangla.
                 5. Rate the sentence from 1 to 9 (IELTS band scale).
-                6. Suggest synonyms words or most appropiate word for this sentence.
+                6. Suggest synonyms words or most appropriate words for this sentence.
 
                 Use this format:
 
