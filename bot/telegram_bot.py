@@ -75,6 +75,5 @@ async def run_bot_async():
     print("Telegram bot running asynchronously...")
     await application.initialize()
     await application.start()
-    await application.updater.start_polling()
-    # This will run until stopped
-    await application.updater.idle()
+    # Run polling until the app is stopped (this is non-blocking if awaited)
+    await application.run_polling()
