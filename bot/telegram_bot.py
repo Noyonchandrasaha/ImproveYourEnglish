@@ -65,9 +65,16 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await send_new_bangla_sentence(update, user_id)
 
-def run_bot():
+
+# New async runner function:
+async def run_bot_async():
     application = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    print("Telegram bot running...")
-    application.run_polling()
+
+    print("Telegram bot running asynchronously...")
+    await application.initialize()
+    await application.start()
+    await application.updater.start_polling()
+    # This will run until stopped
+    await application.updater.idle()
