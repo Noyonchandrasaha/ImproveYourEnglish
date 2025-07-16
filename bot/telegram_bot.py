@@ -73,7 +73,9 @@ async def run_bot_async():
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     print("Telegram bot running asynchronously...")
+
     await application.initialize()
     await application.start()
-    # Run polling until the app is stopped (this is non-blocking if awaited)
-    await application.run_polling()
+
+    # ✅ Use this instead of `run_polling()` to avoid event loop crash
+    await application.updater.start_polling()
