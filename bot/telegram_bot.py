@@ -8,7 +8,8 @@ from telegram.ext import (
     filters,
     ContextTypes,
 )
-from app.core.config import TELEGRAM_TOKEN, API_URL
+from app.core.config import TELEGRAM_TOKEN
+API_URL= 'https://improveyourenglish.onrender.com' 
 
 logging.basicConfig(level=logging.INFO)
 
