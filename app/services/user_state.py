@@ -28,15 +28,28 @@ def clear_user_state(user_id: int):
 
 def get_next_topic(user_id: int):
     topic_sequence = [
-        "Tenses",
-        "Sentence Structure",
+        "Parts of Speech",
+        "Present Tense Usage in Daily Life",
+        "Past Tense Usage in Storytelling",
+        "Future Forms for Plans and Predictions",
+        "Sentence Structure (Simple, Compound, Complex)",
         "Subject-Verb Agreement",
-        "Articles",
-        "Active and Passive Voice",
-        "Modal Verbs",
-        "Conditionals",
-        "Direct and Indirect Speech"
+        "Question Formation (Yes/No, WH-questions)",
+        "Modal Verbs for Advice, Necessity, Possibility",
+        "Common Prepositions in Context (Time, Place, Direction)",
+        "Articles: A, An, The – Everyday Use",
+        "Pronouns and Reference Clarity",
+        "Countable vs Uncountable Nouns",
+        "There is / There are (Describing Situations)",
+        "Active and Passive Voice (Formal Writing & News)",
+        "Conditionals (Real and Unreal Situations)",
+        "Direct and Indirect Speech (Conversation & Reporting)",
+        "Gerunds and Infinitives (Common Verbs)",
+        "Comparatives and Superlatives (Making Comparisons)",
+        "Common Conjunctions (and, but, although, because)",
+        "Relative Clauses (who, which, where – Describing People and Things)"
     ]
+    
     completed = get_user_topics(user_id)
     for topic in topic_sequence:
         if topic not in completed:
